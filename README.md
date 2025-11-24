@@ -46,7 +46,15 @@ gcc ...
 
 # DIAGRAMME DU FLOWCHART #
 
-
+	start
+	read a string
+	if string == NULL
+	return an error code
+	fin if
+	else
+	return string lenght 
+	fin else
+	stop
 
 # ECRIRE UNE MAN PAGE #
 
