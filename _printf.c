@@ -8,13 +8,13 @@
 */
 int _printf(const char *format, ...)
 {
-	int len;
+	int stringLen;
 
 	if (format == NULL)
 	{
 		puts("Error transmission");
 	}
-	len = puts(*format);
+	stringLen = puts(*format);
 
-	return (len);
+	return (stringLen);
 }
