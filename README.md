@@ -34,7 +34,7 @@ Return Value:
 
 # COMMANDE COMPILE #
 
-gcc ...
+	gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c
 
 # ENVIRONNEMENT TECHNIQUE #
 
