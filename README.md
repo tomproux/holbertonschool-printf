@@ -6,14 +6,13 @@ PRINTF
 
 In C language, printf() function is used to print formatted output to the standard output stdout (which is generally the console screen).
 
-#include <stdio.h>
-int main()
-{ 
-    // Using printf to print the text "Hi!"
-	printf("Hi!");
-
-	return 0;
-}
+	#include <stdio.h>
+	int main()
+	{ 
+		/*Using printf to print the text "Hi!"*/
+		printf("Hi!");
+		return 0;
+	}
 Output
 Hi!
 
@@ -23,7 +22,7 @@ Explanation: In this program, the printf function print the text "Hi!" on the co
 
 The printf() function is defined inside <stdio.h> header file.
 
-printf("format_string", args...);
+	printf("format_string", args...);
 
 Parameter:
 1. formatted_string: It is a string that specifies the data to be printed. It may also contain a format specifier as a placeholder to print the value of any variable or value.
