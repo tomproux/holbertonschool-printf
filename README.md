@@ -49,17 +49,18 @@ Return Value:
 	start
 	read a string
 	if string == NULL
-		return an error code
-	fin if
+		return NULL
+	finif
+	elseif string < 0
+		return -1
+	finelseif
+	elseif string == 0
+		return 0
+	finelseif
 	else
-		if
-			display error code
-		finif
-		else 
-			display string
-		finelse
+		display string
 		return string lenght
-	fin else
+	finelse
 	stop
 
 # ECRIRE UNE MAN PAGE #
