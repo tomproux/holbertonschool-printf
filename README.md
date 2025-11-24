@@ -52,13 +52,13 @@ Return Value:
 		return an error code
 	fin if
 	else
-		return string lenght 
 		if
 			display error code
 		finif
 		else 
 			display string
 		finelse
+		return string lenght
 	fin else
 	stop
 
