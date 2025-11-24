@@ -49,10 +49,16 @@ Return Value:
 	start
 	read a string
 	if string == NULL
-	return an error code
+		return an error code
 	fin if
 	else
-	return string lenght 
+		return string lenght 
+		if
+			display error code
+		finif
+		else 
+			display string
+		finelse
 	fin else
 	stop
 
