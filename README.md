@@ -58,8 +58,18 @@ Return Value:
 		return 0
 	finelseif
 	else
-		display string
-		return string lenght
+		if args == 0
+			display string
+			return string lenght
+		finif
+		elseif args > 0
+			remplacer %... par la valeur de args
+			display string
+			return string lenght
+		finelseif
+		else
+			return err
+		finelse
 	finelse
 	stop
 
