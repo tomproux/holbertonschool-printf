@@ -8,13 +8,25 @@
 */
 int _printf(const char *format, ...)
 {
-	int stringLen;
-
-	if (format == NULL)
+	if (*format == NULL)
+		return (NULL);
+	
+	elseif (*format < 0)
+		return (-1);
+	
+	else
 	{
-		puts("Error transmission");
+		if (args == 0)
+		{
+			puts(format);
+			return strlen(format);
+		}
+		else
+		{
+			/*remplacer %... par la valeur de args
+			?*/
+			puts(format);
+			return (strlen(format));
+		}
 	}
-	stringLen = puts(*format);
-
-	return (stringLen);
 }
