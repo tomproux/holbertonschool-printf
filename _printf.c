@@ -1,32 +1,67 @@
 #include "main.h"
+#include <stdarg.h>
+#include <unistd.h>
 
-/**
-* _printf- equivalent de la fonction printf
-* @format: chaine de caractere transmise en parametre
-*
-* Return the string lenght
-*/
 int _printf(const char *format, ...)
 {
-	if (*format == NULL)
-		return (NULL);
-	
-	elseif (*format < 0)
-		return (-1);
-	
-	else
-	{
-		if (args == 0)
-		{
-			puts(format);
-			return strlen(format);
-		}
-		else
-		{
-			/*remplacer %... par la valeur de args
-			?*/
-			puts(format);
-			return (strlen(format));
-		}
-	}
+	va_list args;
+	int count = 0;
+	int i = 0;
+	char c;
+	char *str;
+
+	if(!format)
+		return(-1);
+
+	va_start(args, format);
+
+	 while (format[i])
+    {
+        if (format[i] == '%')
+        {
+            i++;
+
+            if (format[i] == 'c')
+            {
+                c = (char)va_arg(args, int);
+                write(1, &c, 1);
+                count++;
+            }
+            else if (format[i] == 's')
+            {
+                str = va_arg(args, char *);
+                if (!str)
+                    str = "(null)";
+                while (*str)
+                {
+                    write(1, str, 1);
+                    str++;
+                    count++;
+                }
+            }
+            else if (format[i] == '%')
+            {
+                write(1, "%", 1);
+                count++;
+            }
+            else
+            {
+                /* Cas non reconnu : on affiche '%' + le caractère */
+                write(1, "%", 1);
+                write(1, &format[i], 1);
+                count += 2;
+            }
+        }
+        else
+        {
+            write(1, &format[i], 1);
+            count++;
+        }
+
+        i++;	
+    }
+
+    va_end(args);
+    return (count);
+}
 }
