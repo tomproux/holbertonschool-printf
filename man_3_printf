@@ -28,5 +28,6 @@
         _printf("Hello %s\n", "world");
               Writes: Hello world
 
+
         _printf("Value: %d\n", 42);
               Writes: Value: 42    
