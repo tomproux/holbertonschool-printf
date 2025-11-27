@@ -1,0 +1,32 @@
+#NAME
+        _printf()
+#SYNOPSIS
+        #include "main.h"
+        int _printf(const char *format, ...)
+#DESCRIPTION
+        The _printf() function writes formatted output to the standard
+        output. It is a simplified reimplementation of the standard printf
+        function.
+
+        The format string contains ordinary characters, which are written
+       directly to the output, and conversion specifications, which start
+       with a '%' character.
+
+        A conversion specification has the following form:
+        %specifier
+        Common conversion specifiers include:
+	- d, i : signed decimal integer
+	- c : character
+	- s : string
+#RETURN VALUE
+          On success, _printf() returns the total number of characters
+       written.
+
+       On error, a negative value may be returned (depending on the
+       implementation).
+#EXAMPLES
+        _printf("Hello %s\n", "world");
+              Writes: Hello world
+
+        _printf("Value: %d\n", 42);
+              Writes: Value: 42    
