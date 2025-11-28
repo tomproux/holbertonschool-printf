@@ -83,7 +83,7 @@ int _printf(const char *format, ...)
 				}
 				else
 				{
-					write(1, "", 1);
+					write(1, "\0", 1);
 					count++;
 				}
 			}
