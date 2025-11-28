@@ -1,9 +1,11 @@
 #include "main.h"
 
-void print_digit(va_list args)
+void print_digit(int number)
 {
-	int number = va_args(args, int);
 	int modulo = 10;
+	va_list args;
+
+	number = va_args(args, int);
 
 	if (number < 0)
 	{
