@@ -6,7 +6,7 @@ int _printf(const char *format, ...)
 {
 	va_list args;
 	int count = 0, j = 0, d, i;
-	char c, less = '-', pourcent = '%';
+	char c, less = '-';
 	char *str;
 
 	if (!format)
@@ -69,15 +69,23 @@ int _printf(const char *format, ...)
 			}
 			else if (format[j] == '%')
 			{
-				write(1, &format[j], 1);
+				write(1, "%", 1);
 				count ++;
 			}
 			else
 			{
 				/* unknow character */
-				write(1, &pourcent, 1);
-				write(1, &format[j], 1);
-				count += 2;
+				if (format[j] != '\0')
+				{
+					write(1, "%", 1);
+					write(1, &format[j], 1);
+					count += 2;
+				}
+				else
+				{
+					write(1, "", 1);
+					count++;
+				}
 			}
 		}
 		else
