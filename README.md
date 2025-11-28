@@ -6,19 +6,6 @@ PRINTF
 
 In C language, printf() function is used to print formatted output to the standard output stdout (which is generally the console screen).
 
-# EXEMPLE D'UTILISATION DE LA FONCTION PRINTF #
-	#include <stdio.h>
-	int main()
-	{ 
-		/*Using printf to print the text "Hi!"*/
-		printf("Hi!");
-		return 0;
-	}
-Output
-Hi!
-
-Explanation: In this program, the printf function print the text "Hi!" on the console screen.
-
 # DESCRIPTION #
 
 The printf() function is defined inside <stdio.h> header file.
@@ -32,6 +19,19 @@ Parameter:
 Return Value:
 1. Returns the number of characters printed after successful execution.
 2. If an error occurs, a negative value is returned.
+
+# EXEMPLE D'UTILISATION DE LA FONCTION PRINTF #
+	#include <stdio.h>
+	int main()
+	{ 
+		/*Using printf to print the text "Hi!"*/
+		printf("Hi!");
+		return 0;
+	}
+Output
+Hi!
+
+Explanation: In this program, the printf function print the text "Hi!" on the console screen.
 
 # COMMANDE COMPILE #
 
