@@ -66,11 +66,7 @@ Explanation: In this program, the printf function print the text "Hi!" on the co
 	finelse
 	stop
 
-# EXEMPLE D'EXECUTION #
-
-
-
 # AUTHOR #
 
-@tomproux
-@arthurmoulard
+https://github.com/tomproux
+https://github.com/arthurmoulard
