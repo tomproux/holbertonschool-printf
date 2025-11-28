@@ -3,10 +3,9 @@
 int _printf(const char *format, ...)
 {
 	va_list args;
-	int count = 0, j = 0;
+	int count = 0, j = 0, d, i;
 	char c;
 	char *str;
-	va_list d, i;
 
 	if (!format)
 		return (-1);
