@@ -1,6 +1,6 @@
 #include "main.h"
 
-int print_di(va_list args)
+int print_digit(va_list args)
 {
 	int count = 0;
 	long number = va_arg(args, int);
