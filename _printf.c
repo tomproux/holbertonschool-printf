@@ -3,8 +3,8 @@
 int _printf(const char *format, ...)
 {
 	va_list args;
-	int count = 0, j = 0; /*d, i;*/
-	char c; /*less = '-';*/
+	int count = 0, j = 0; d, i;
+	char c;
 	char *str;
 
 	if (!format)
