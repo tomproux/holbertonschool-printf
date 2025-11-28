@@ -1,9 +1,13 @@
 #include "main.h"
 #include <stdarg.h>
+#include <stdio.h>
 
 void print_digit(int number)
 {
-	int modulo = 10;
+	number = 0;
+
+	printf("%d", number);
+/*	int modulo = 10;
 	va_list args;
 
 	number = va_args(args, int);
@@ -29,5 +33,5 @@ void print_digit(int number)
 			modulo /= 10;
 		}
 		write(1, &number, 1);
-	}
+	}*/
 }
