@@ -58,7 +58,7 @@ int _printf(const char *format, ...)
 				count += 2;
 			}
 		}
-		else if (format[i] == '%' && format[i + 1] == '\0')
+		else if (format[j] == '%' && format[j + 1] == '\0')
 		{
 			return (-1);
 		}
