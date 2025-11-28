@@ -64,13 +64,13 @@ int _printf(const char *format, ...)
 			}
 			else if (format[j] == '%')
 			{
-				write(1, "%", 1);
+				write(1, '%', 1);
 				count++;
 			}
 			else
 			{
 				/* unknow character */
-				write(1, "%", 1);
+				write(1, '%', 1);
 				write(1, &format[j], 1);
 				count += 2;
 			}
