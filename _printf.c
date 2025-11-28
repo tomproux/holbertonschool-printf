@@ -69,22 +69,30 @@ int _printf(const char *format, ...)
 			}
 			else if (format[j] == '%')
 			{
-				write(1, "%", 1);
-				count ++;
+				if (format[j + 1] == '\0')
+				{
+					write(1, "\0", 1);
+					count++;
+				}
+				else
+				{
+					write(1, "%", 1);
+					count ++;
+				}
 			}
 			else
 			{
 				/* unknow character */
-				if (format[j] != '\0')
+				 if (format[j + 1] == '\0')
+				{
+					write(1, "\0", 1);
+					count++;
+				}
+				else
 				{
 					write(1, "%", 1);
 					write(1, &format[j], 1);
 					count += 2;
-				}
-				else
-				{
-					write(1, "\0", 1);
-					count++;
 				}
 			}
 		}
