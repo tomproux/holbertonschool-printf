@@ -47,32 +47,11 @@ int _printf(const char *format, ...)
 				else if (format[j] == 'd')
 				{
 					d = va_arg(args, int);
-					if (d < 0)
-					{
-						write(1, &less, 1);
-						write(1, &d, 1);
-						count++;
-					}
-					else
-					{
-						write(1, &d, 1);
-						count++;
-					}
-				}
+					print_digit(d);
 				else if (format[j] == 'i')
 				{
 					i = va_arg(args, int);
-					if (i < 0)
-					{
-						write(1, &less, 1);
-						write(1, &i, 1);
-						count++;
-					}
-					else
-					{
-						write(1, &i, 1);
-						count++;
-					}
+					print_digit(i);
 				}
 				else if (format[j] == '%')
 				{
