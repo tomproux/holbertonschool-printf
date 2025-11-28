@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdarg.h>
 
 int print_di(va_list args)
 {
