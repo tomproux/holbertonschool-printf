@@ -65,7 +65,6 @@ int _printf(const char *format, ...)
 			else
 			{
 				write(1, &format[j], 1);
-				count++;
 			}
 		}
 		else
