@@ -67,6 +67,11 @@ int _printf(const char *format, ...)
 					count++;
 				}
 			}
+			else if (format[j] == '%')
+			{
+				write(1, &format[j], 1);
+				count ++;
+			}
 			else
 			{
 				/* unknow character */
