@@ -35,7 +35,7 @@ int _printf(const char *format, ...)
 					count++;
 				}
 			}
-			/*else if (format[j] == 'd')
+			else if (format[j] == 'd')
 			{
 				d = va_arg(args, int);
 				print_digit(d);
@@ -44,7 +44,7 @@ int _printf(const char *format, ...)
 			{
 				i = va_arg(args, int);
 				print_digit(i);
-			}*/
+			}
 			else if (format[j] == '%')
 			{
 				write(1, "%", 1);
