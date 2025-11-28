@@ -6,6 +6,7 @@ PRINTF
 
 In C language, printf() function is used to print formatted output to the standard output stdout (which is generally the console screen).
 
+# EXEMPLE D'UTILISATION DE LA FONCTION PRINTF #
 	#include <stdio.h>
 	int main()
 	{ 
@@ -36,14 +37,6 @@ Return Value:
 
 	gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c
 
-# ENVIRONNEMENT TECHNIQUE #
-
-
-
-# EXEMPLE D'UTILISATION DE LA FONCTION PRINTF #
-
-
-
 # DIAGRAMME DU FLOWCHART #
 
 	start
@@ -73,14 +66,5 @@ Return Value:
 	finelse
 	stop
 
-# ECRIRE UNE MAN PAGE #
-
-
-
 # EXEMPLE D'EXECUTION #
 
-
-
-# REQUIREMENTS POUR UTILISER CORRECTEMENT LA FONCTION #
-
-#
