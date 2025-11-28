@@ -55,8 +55,17 @@ int _printf(const char *format, ...)
 			else if (format[j] == 'i')
 			{
 				i = va_arg(args, int);
-				write(1, &i, 1);
-				count++;
+				if (i < 0)
+				{
+					write(1, &less, 1);
+					write(1, &i, 1);
+					count++;
+				}
+				else
+				{
+					write(1, &i, 1);
+					count++;
+				}
 			}
 			else if (format[j] == '%')
 			{
