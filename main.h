@@ -2,6 +2,6 @@
 #define MAIN_H
 
 int _printf(const char *format, ...);
-void print_digit(va_list args);
+void print_digit(int number);
 
 #endif
