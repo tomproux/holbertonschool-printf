@@ -3,7 +3,7 @@
 int _printf(const char *format, ...)
 {
 	va_list args;
-	int count = 0, j = 0, d, i;
+	int count = 0, j = 0;
 	char c;
 	char *str;
 
@@ -35,15 +35,9 @@ int _printf(const char *format, ...)
 					count++;
 				}
 			}
-			else if (format[j] == 'd')
+			else if (format[j] == 'd' && format[j] == 'i')
 			{
-				d = va_arg(args, int);
-				print_digit(d);
-			}
-			else if (format[j] == 'i')
-			{
-				i = va_arg(args, int);
-				print_digit(i);
+				print_digit(args);
 			}
 			else if (format[j] == '%')
 			{
