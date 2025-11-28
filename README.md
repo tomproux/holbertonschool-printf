@@ -68,3 +68,8 @@ Explanation: In this program, the printf function print the text "Hi!" on the co
 
 # EXEMPLE D'EXECUTION #
 
+
+
+# AUTHOR #
+
+@tomproux
