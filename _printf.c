@@ -19,44 +19,53 @@ int _printf(const char *format, ...)
 		if (format[j] == '%')
 		{
 			j++;
-			if (format[j] == 'c')
+			if (format[j] != '\0')
 			{
-				c = (char)va_arg(args, int);
-				write(1, &c, 1);
-				count++;
-			}
-			else if (format[j] == 's')
-			{
-				str = va_arg(args, char *);
-				if (!str)
-					str = "(null)";
-				while (*str)
+				if (format[j] == 'c')
 				{
-					write(1, str, 1);
-					str++;
+					c = (char)va_arg(args, int);
+					write(1, &c, 1);
 					count++;
 				}
-			}
-			/*else if (format[j] == 'd')
-			{
-				d = va_arg(args, int);
-				print_digit(d);
-			else if (format[j] == 'i')
-			{
-				i = va_arg(args, int);
-				print_digit(i);
-			}*/
-			else if (format[j] == '%')
-			{
-				write(1, "%", 1);
-				count ++;
+				else if (format[j] == 's')
+				{
+					str = va_arg(args, char *);
+					if (!str)
+						str = "(null)";
+					while (*str)
+					{
+						write(1, str, 1);
+						str++;
+						count++;
+					}
+				}
+				/*else if (format[j] == 'd')
+				{
+					d = va_arg(args, int);
+					print_digit(d);
+				}
+				else if (format[j] == 'i')
+				{
+					i = va_arg(args, int);
+					print_digit(i);
+				}*/
+				else if (format[j] == '%')
+				{
+					write(1, "%", 1);
+					count ++;
+				}
+				else
+				{
+					/* unknow character */
+					write(1, "%", 1);
+					write(1, &format[j], 1);
+					count += 2;
+				}
 			}
 			else
 			{
-				/* unknow character */
-				write(1, "%", 1);
 				write(1, &format[j], 1);
-				count += 2;
+				count++;
 			}
 		}
 		else
