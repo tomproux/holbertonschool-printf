@@ -68,6 +68,8 @@ Explanation: In this program, the printf function print the text "Hi!" on the co
 
 # AUTHOR #
 
+@tomproux
 https://github.com/tomproux
 
+@arthurmoulard
 https://github.com/arthurmoulard
