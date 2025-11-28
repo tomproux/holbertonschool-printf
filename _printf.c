@@ -5,13 +5,9 @@
 int _printf(const char *format, ...)
 {
 	va_list args;
-	int count = 0;
-	int j = 0;
-	char c;
+	int count = 0, j = 0, d, i;
+	char c, less = '-', pourcent = '%';
 	char *str;
-	int d;
-	int i;
-	char less = '-';
 
 	if (!format)
 		return (-1);
@@ -64,13 +60,13 @@ int _printf(const char *format, ...)
 			}
 			else if (format[j] == '%')
 			{
-				write(1, '%', 1);
+				write(1, &pourcent, 1);
 				count++;
 			}
 			else
 			{
 				/* unknow character */
-				write(1, '%', 1);
+				write(1, &pourcent, 1);
 				write(1, &format[j], 1);
 				count += 2;
 			}
