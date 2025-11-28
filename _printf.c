@@ -67,33 +67,22 @@ int _printf(const char *format, ...)
 					count++;
 				}
 			}
+			else if (format[j] == '\0')
+			{
+				write(1, "\0", 1);
+				count++;
+			}
 			else if (format[j] == '%')
 			{
-				if (format[j + 1] == '\0')
-				{
-					write(1, "\0", 1);
-					count++;
-				}
-				else
-				{
-					write(1, "%", 1);
-					count ++;
-				}
+				write(1, "%", 1);
+				count ++;
 			}
 			else
 			{
 				/* unknow character */
-				 if (format[j + 1] == '\0')
-				{
-					write(1, "\0", 1);
-					count++;
-				}
-				else
-				{
-					write(1, "%", 1);
-					write(1, &format[j], 1);
-					count += 2;
-				}
+				write(1, "%", 1);
+				write(1, &format[j], 1);
+				count += 2;
 			}
 		}
 		else
