@@ -41,6 +41,10 @@ Explanation: In this program, the printf function print the text "Hi!" on the co
 
 <img width="566" height="729" alt="image" src="https://github.com/user-attachments/assets/963cdb74-198a-4ee4-ab44-9ad466576164" />
 
+# MAN PAGE #
+
+The man page of the function _printf() is man_3_printf 
+
 # AUTHOR #
 
 @tomproux
