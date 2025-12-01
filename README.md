@@ -39,32 +39,7 @@ Explanation: In this program, the printf function print the text "Hi!" on the co
 
 # DIAGRAMME DU FLOWCHART #
 
-	start
-	read a string
-	if string == NULL
-		return NULL
-	finif
-	elseif string < 0
-		return -1
-	finelseif
-	elseif string == 0
-		return 0
-	finelseif
-	else
-		if args == 0
-			display string
-			return string lenght
-		finif
-		elseif args > 0
-			remplacer %... par la valeur de args
-			display string
-			return string lenght
-		finelseif
-		else
-			return err
-		finelse
-	finelse
-	stop
+<img width="566" height="729" alt="image" src="https://github.com/user-attachments/assets/963cdb74-198a-4ee4-ab44-9ad466576164" />
 
 # AUTHOR #
 
